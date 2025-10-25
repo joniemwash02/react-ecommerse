@@ -12,7 +12,7 @@ const Modal = ({ isModalOpen, setIsModalOpen, children }) => {
         className="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative animate-fadeIn"
         onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
       >
-        {/* Close Button */}
+        {/* Close Button */}//
         <button
           onClick={() => setIsModalOpen(false)}
           className="absolute top-3 right-3 text-gray-600 hover:text-red-600 text-2xl"
@@ -22,6 +22,7 @@ const Modal = ({ isModalOpen, setIsModalOpen, children }) => {
 
         {/* Modal Content */}
         <div className="mt-4">{children}</div>
+    
       </div>
     </div>
   );

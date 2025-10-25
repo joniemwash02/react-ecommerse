@@ -5,11 +5,11 @@ const ChangeAddress = ({ onCancel, onSave }) => {
 
   const handleSave = () => {
     if (!address.trim()) {
-      alert("Please enter a valid address.");
-      return;
+      alert("Please enter a valid email Adress.");
+      return;//
     }
-    onSave(address);
-  };
+    onSave(address);//save the address to the database
+  };//
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-md w-full max-w-md mx-auto">
