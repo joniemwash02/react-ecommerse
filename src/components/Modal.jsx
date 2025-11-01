@@ -6,23 +6,21 @@ const Modal = ({ isModalOpen, setIsModalOpen, children }) => {
   return (
     <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50"
-      onClick={() => setIsModalOpen(true)} // Close when clicking outside
+      onClick={() => setIsModalOpen(false)}
     >
       <div
-        className="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative animate-fadeIn"
-        onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+        className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md relative animate-fadeIn"
+        onClick={(e) => e.stopPropagation()} // prevent modal close when clicking inside
       >
-        {/* Close Button */}//
+        {/* Close Button */}
         <button
           onClick={() => setIsModalOpen(false)}
-          className="absolute top-3 right-3 text-gray-600 hover:text-red-600 text-2xl"
+          className="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-lg font-bold"
         >
-          &times;
+          ✕
         </button>
 
-        {/* Modal Content */}
-        <div className="mt-4">{children}</div>
-    
+        {children}
       </div>
     </div>
   );
